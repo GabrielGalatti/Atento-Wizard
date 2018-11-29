@@ -1,18 +1,3 @@
-/*function changeImage(id, idselected)
-{
-    var imgParent = document.getElementById(id);
-    var imgChild = document.getElementById(idselected);
-
-    if(imgChild.className == "img-invisible"){
-        imgChild.className = "img-visible";
-    }
-    else if (imgChild.className == "img-visible"){       
-        imgChild.className = "img-invisible";
-    }
-
-} */
-
-
 var idNormal = ["informacoesImg","dadosImg"];
 //console.log(idNormal);
 var idselected = ["informacoes-hoverImg", "dados-hoverImg"];
@@ -40,44 +25,41 @@ function changeImage(pos){
 
 
 var currentTab = 0;
+var sectionsId = ["section1", "section2", "section3","section4"];
 
 
 function showTab(n) {
-    // This function will display the specified tab of the form ...
-    var x = document.getElementsByClassName("tab");
-    x[n].style.display = "block";
-    changeImageButton();
-    
-    // ... and fix the Previous/Next buttons:
-    if (n === 0) {
+    var sectionsId = ["section1", "section2", "section3","section4"];
+
+    sectionsId.forEach(id => {
+        document.getElementById(id).style.display = "none";
+    });
+
+    if(n == -1){
+        document.getElementById(sectionsId[0]).style.display = "block"; 
+        changeImageButton(0);
+    }
+    else{
+    document.getElementById(sectionsId[n]).style.display = "block"; 
+    changeImageButton(n);
+    }
+
+    if (n <= 0) {
         document.getElementById("prevBtn").style.display = "none";
     } else {
         document.getElementById("prevBtn").style.display = "inline";
     }
-    if (n === (x.length - 1)) {
-        document.getElementById("nextBtn").innerHTML = "Submit";
-    } else {
-        document.getElementById("nextBtn").innerHTML = "Next";
-    }
-    // ... and run a function that displays the correct step indicator:
-
 }
 
 function nextPrev(n) {
-    // This function will figure out which tab to display
-    var x = document.getElementsByClassName("tab");
-    // Exit the function if any field in the current tab is invalid:
-    if (n === 1);
-    // Hide the current tab:
-    x[currentTab].style.display = "none";
-    // Increase or decrease the current tab by 1:
+   // var x = document.getElementsByClassName("tab");
+   // if (n === 1);
+   // x[currentTab].style.display = "none";
     currentTab = currentTab + n;
-    // if you have reached the end of the form...
-    if (currentTab >= x.length) {
+    /*if (currentTab >= x.length) {
         // ... the form gets submitted:
         document.getElementById("regForm").submit();
-    }
-    // Otherwise, display the correct tab:
+    }*/
     showTab(currentTab);   
 }
 
@@ -87,14 +69,12 @@ function changeTabImage(pos){
     sectionsId.forEach(id => {
         document.getElementById(id).style = "";
     });
-
-    document.getElementById(sectionsId[pos]).style.display = "block";
-    changeImageButton();
+    showTab(pos);
 }
 
 
-function changeImageButton(){
-if(currentTab == 0){
+function changeImageButton(n){
+if(n === 0){
     changeImage(0);
 }
 else{
