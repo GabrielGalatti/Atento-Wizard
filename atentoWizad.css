@@ -1,0 +1,30 @@
+.icon-header{
+    overflow: auto;
+}
+
+.icon-image{
+    float: right;
+}
+
+.parent-icon-div{
+    position: relative;
+    top:0px; 
+    left:0px;
+}
+
+.child-icon-div{
+    position: absolute;
+    top:0px; 
+    left:0px;
+}
+
+.visible{
+    display: block;
+}
+
+.invisible{
+    display:none;
+}
+.tab{
+    display: none;
+}
