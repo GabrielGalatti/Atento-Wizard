@@ -1,6 +1,6 @@
-var idNormal = ["informacoesImg","dadosImg"];
+var idNormal = ["informacoesImg","dadosImg", "sistemasImg", "vozImg", "outrosImg"];
 //console.log(idNormal);
-var idselected = ["informacoes-hoverImg", "dados-hoverImg"];
+var idselected = ["informacoes-hoverImg", "dados-hoverImg", "sistemas-hoverImg", "voz-hoverImg", "outros-hoverImg"];
 //console.log(idselected);
 
 function changeImage(pos){
@@ -22,14 +22,11 @@ function changeImage(pos){
     }
 }
 
-
-
 var currentTab = 0;
-var sectionsId = ["section1", "section2", "section3","section4"];
-
+var sectionsId = ["section1", "section2", "section3","section4","section5"];
 
 function showTab(n) {
-    var sectionsId = ["section1", "section2", "section3","section4"];
+    var sectionsId = ["section1", "section2", "section3","section4","section5"];
 
     sectionsId.forEach(id => {
         document.getElementById(id).style.display = "none";
@@ -49,6 +46,10 @@ function showTab(n) {
     } else {
         document.getElementById("prevBtn").style.display = "inline";
     }
+    
+    currentTab = n;
+    //console.log(n);
+    //console.log(currentTab);
 }
 
 function nextPrev(n) {
@@ -64,7 +65,7 @@ function nextPrev(n) {
 }
 
 function changeTabImage(pos){
-    var sectionsId = ["section1", "section2", "section3","section4"];
+    var sectionsId = ["section1", "section2", "section3","section4","section5"];
    
     sectionsId.forEach(id => {
         document.getElementById(id).style = "";
@@ -77,8 +78,17 @@ function changeImageButton(n){
 if(n === 0){
     changeImage(0);
 }
-else{
+else if(n === 1){
     changeImage(1);
+}
+else if(n === 2){
+    changeImage(2);
+}
+else if(n === 3){
+    changeImage(3);
+}
+else if(n === 4){
+    changeImage(4);
 }
 }
 

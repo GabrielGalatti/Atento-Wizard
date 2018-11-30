@@ -28,3 +28,8 @@
 .tab{
     display: none;
 }
+
+.image-inline{
+    display: inline;
+    margin-right: 10px;
+}

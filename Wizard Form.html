@@ -13,7 +13,7 @@
 </head>
 <body>
     <!--Estrutura de concatenação de divs sobrepondo imagens-->
-    <div class="icon-header">
+    <div class="icon-header image-inline">
         <div class="icon-image">
             <div id="parent-div-informacoes" class="parent-icon-div">
                     <a id="informacoesImg" onclick="changeImage(0); changeTabImage(0)"><img src="images/Informações.png"></a>
@@ -21,12 +21,10 @@
                         <a id="informacoes-hoverImg" onclick="changeImage(0);" class="invisible"><img src="images/InformaçõesHover.png"></a>
                     </div>
             </div>
-
         </div>
     </div>
 
-
-    <div class="icon-header">
+    <div class="icon-header image-inline">
         <div class="icon-image">
             <div id="parent-div-dados" class="parent-icon-div">
                     <a id="dadosImg" onclick="changeImage(1);changeTabImage(1)"><img src="images/Dados.png"></a>
@@ -34,7 +32,39 @@
                         <a id="dados-hoverImg" onclick="changeImage(1); " class="invisible"><img src="images/DadosHover.png"></a>
                     </div>
             </div>
+        </div>
+    </div>
 
+    <div class="icon-header image-inline">
+        <div class="icon-image">
+            <div id="parent-div-dados" class="parent-icon-div">
+                    <a id="sistemasImg" onclick="changeImage(2);changeTabImage(2)"><img src="images/Sistemas.png"></a>
+                    <div id="child-div-dados" class="child-icon-div">
+                        <a id="sistemas-hoverImg" onclick="changeImage(2); " class="invisible"><img src="images/SistemasHover.png"></a>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="icon-header image-inline">
+        <div class="icon-image">
+            <div id="parent-div-dados" class="parent-icon-div">
+                    <a id="vozImg" onclick="changeImage(3);changeTabImage(3)"><img src="images/Voz.png"></a>
+                    <div id="child-div-dados" class="child-icon-div">
+                        <a id="voz-hoverImg" onclick="changeImage(3); " class="invisible"><img src="images/VozHover.png"></a>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="icon-header image-inline">
+        <div class="icon-image">
+            <div id="parent-div-dados" class="parent-icon-div">
+                    <a id="outrosImg" onclick="changeImage(4);changeTabImage(4)"><img src="images/Outros.png"></a>
+                    <div id="child-div-dados" class="child-icon-div">
+                        <a id="outros-hoverImg" onclick="changeImage(4); " class="invisible"><img src="images/OutrosHover.png"></a>
+                    </div>
+            </div>
         </div>
     </div>
 
@@ -62,6 +92,11 @@
           <p><input placeholder="Username..." oninput="this.className = ''"></p>
           <p><input placeholder="Password..." oninput="this.className = ''"></p>
         </div>
+
+        <div class="tab" id="section5">School:
+            <p><input placeholder="Name of School..." oninput="this.className = ''"></p>
+            <p><input placeholder="Name of University..." oninput="this.className = ''"></p>
+          </div>
 
         <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
         <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
