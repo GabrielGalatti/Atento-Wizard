@@ -13,12 +13,13 @@
 </head>
 <body>
     <!--Estrutura de concatenação de divs sobrepondo imagens-->
+
     <div class="icon-header image-inline">
         <div class="icon-image">
-            <div id="parent-div-informacoes" class="parent-icon-div">
-                    <a id="informacoesImg" onclick="changeImage(0); changeTabImage(0)"><img src="images/Informações.png"></a>
-                    <div id="child-div-dados" class="child-icon-div">
-                        <a id="informacoes-hoverImg" onclick="changeImage(0);" class="invisible"><img src="images/InformaçõesHover.png"></a>
+            <div id="parent-div-outros" class="parent-icon-div">
+                    <a id="outrosImg" class="image-margin" onclick="changeImage(4);changeTabImage(4)"><img src="images/Outros.png"></a>
+                    <div id="child-div-outros" class="child-icon-div">
+                        <a id="outros-hoverImg" onclick="changeImage(4); " class="invisible"><img src="images/OutrosHover.png"></a>
                     </div>
             </div>
         </div>
@@ -26,20 +27,9 @@
 
     <div class="icon-header image-inline">
         <div class="icon-image">
-            <div id="parent-div-dados" class="parent-icon-div">
-                    <a id="dadosImg" onclick="changeImage(1);changeTabImage(1)"><img src="images/Dados.png"></a>
-                    <div id="child-div-dados" class="child-icon-div">
-                        <a id="dados-hoverImg" onclick="changeImage(1); " class="invisible"><img src="images/DadosHover.png"></a>
-                    </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="icon-header image-inline">
-        <div class="icon-image">
-            <div id="parent-div-dados" class="parent-icon-div">
-                    <a id="sistemasImg" onclick="changeImage(2);changeTabImage(2)"><img src="images/Sistemas.png"></a>
-                    <div id="child-div-dados" class="child-icon-div">
+            <div id="parent-div-sistemas" class="parent-icon-div">
+                    <a id="sistemasImg" class="image-margin" onclick="changeImage(2);changeTabImage(2)"><img src="images/Sistemas.png"></a>
+                    <div id="child-div-sistemas" class="child-icon-div">
                         <a id="sistemas-hoverImg" onclick="changeImage(2); " class="invisible"><img src="images/SistemasHover.png"></a>
                     </div>
             </div>
@@ -49,8 +39,19 @@
     <div class="icon-header image-inline">
         <div class="icon-image">
             <div id="parent-div-dados" class="parent-icon-div">
-                    <a id="vozImg" onclick="changeImage(3);changeTabImage(3)"><img src="images/Voz.png"></a>
+                    <a id="dadosImg" class="image-margin" onclick="changeImage(1);changeTabImage(1)"><img src="images/Dados.png"></a>
                     <div id="child-div-dados" class="child-icon-div">
+                        <a id="dados-hoverImg" onclick="changeImage(1); " class="invisible"><img src="images/DadosHover.png"></a>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="icon-header image-inline">
+        <div class="icon-image">
+            <div id="parent-div-voz" class="parent-icon-div">
+                    <a id="vozImg" class="image-margin" onclick="changeImage(3);changeTabImage(3)"><img src="images/Voz.png"></a>
+                    <div id="child-div-voz" class="child-icon-div">
                         <a id="voz-hoverImg" onclick="changeImage(3); " class="invisible"><img src="images/VozHover.png"></a>
                     </div>
             </div>
@@ -59,14 +60,15 @@
 
     <div class="icon-header image-inline">
         <div class="icon-image">
-            <div id="parent-div-dados" class="parent-icon-div">
-                    <a id="outrosImg" onclick="changeImage(4);changeTabImage(4)"><img src="images/Outros.png"></a>
+            <div id="parent-div-informacoes" class="parent-icon-div">
+                    <a id="informacoesImg" class="image-margin" onclick="changeImage(0); changeTabImage(0)"><img src="images/Informações.png"></a>
                     <div id="child-div-dados" class="child-icon-div">
-                        <a id="outros-hoverImg" onclick="changeImage(4); " class="invisible"><img src="images/OutrosHover.png"></a>
+                        <a id="informacoes-hoverImg" onclick="changeImage(0);" class="invisible"><img src="images/InformaçõesHover.png"></a>
                     </div>
             </div>
         </div>
     </div>
+
 
     <form id="regForm" action="">
 

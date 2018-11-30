@@ -31,5 +31,8 @@
 
 .image-inline{
     display: inline;
+}
+
+.image-margin{
     margin-right: 10px;
 }
